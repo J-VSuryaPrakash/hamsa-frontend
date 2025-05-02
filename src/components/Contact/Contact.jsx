@@ -17,7 +17,7 @@ function Contact(){
 
     const onSubmit = (data) => {
 
-        axios.post('/api/contact-info', data)
+        axios.post('https://hamsa-backend-nr8k.onrender.com/api/contact-info', data)
           .then((response) => {
             console.log(response);
           })
