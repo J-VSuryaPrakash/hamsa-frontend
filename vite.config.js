@@ -5,8 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   server:{
-    proxy:{
-      '/api': "http://localhost:3000"
+    proxy: {
+      '/api': {
+        target: 'https://hamsa-backend-nr8k.onrender.com',
+        changeOrigin: true,
+      }
     }
   },
   plugins: [react(),tailwindcss()],
